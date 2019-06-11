@@ -67,7 +67,7 @@ public class pratica03 {
 		System.out.println("5 VERTICES MAIS INFLUENTES:\n");
 		Collections.sort(usuarios, new AlphaScoreComparator());
 		for(int i=0; i<5; i++) {
-			System.out.println("#ID: " + usuarios.get(i).getNome() + "\n" + "alphaScore: " + usuarios.get(i).getAlphaScore() + "\n" + "beetweennessScore: "+ usuarios.get(i).getBeetweennessScore() + "\n**********");
+			System.out.println("#ID: " + usuarios.get(i).getNome() + "\n**********");
 		}
 		
 		System.out.println("--------------------------------------------------");
@@ -76,7 +76,7 @@ public class pratica03 {
 		System.out.println("10 VERTICES MELHORES DISSEMINADORES:\n");
 		Collections.sort(usuarios, new BeetweennessComparator());
 		for(int i=0; i<5; i++) {
-			System.out.println("§ID: " + usuarios.get(i).getNome() + "\n" + "alphaScore: " + usuarios.get(i).getAlphaScore() + "\n" + "beetweennessScore: "+ usuarios.get(i).getBeetweennessScore() + "\n**********");
+			System.out.println("§ID: " + usuarios.get(i).getNome() + "\n**********");
 		}
 	}
 	
