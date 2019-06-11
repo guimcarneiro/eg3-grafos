@@ -1,6 +1,5 @@
 package logic;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -19,20 +18,13 @@ import entities.User;
  */
 public class pratica03 {
 	
-	public static double truncate(Double valor, int precisao) {
-		BigDecimal bd = BigDecimal.valueOf(valor);
-		bd = bd.setScale(precisao, BigDecimal.ROUND_DOWN);
-
-		return bd.doubleValue();
-	}
-	
 	private static SimpleGraph<String, DefaultEdge> importaGrafo() {
 		
 		SimpleGraph<String, DefaultEdge> grafoBase = new SimpleGraph<>(DefaultEdge.class);
 
 		grafoBase = (SimpleGraph<String, DefaultEdge>) MyJGraphTUtil.importDefaultGraphGML(
 				grafoBase, 
-				"ep03outro.gml");	//importa GML
+				"EP03.gml");	//importa GML
 		
 		return grafoBase;
 	}
